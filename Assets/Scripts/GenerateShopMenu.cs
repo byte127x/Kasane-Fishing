@@ -135,6 +135,7 @@ public class GenerateShopMenu : MonoBehaviour
         HorizRow.GetComponent<RectTransform>().sizeDelta = new Vector2(1920f, 600f);
 
         HorizRow.transform.SetParent(gameObject.transform);
+        HorizRow.transform.localScale = new Vector3(1, 1, 1);
         return new GameObject();
     }
 
