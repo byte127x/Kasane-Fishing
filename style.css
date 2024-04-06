@@ -13,6 +13,7 @@ body {
 	background: #090909;
 	font-family: MB Picture House Two;
 	color: #eee;
+	position: relative;
 }
 
 a {
@@ -24,21 +25,23 @@ a:hover {
 }
 
 nav {
+	top: 15px;
 	width: calc(100% - 30px);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	background: #131313;
+	background: rgba(25, 25, 25, 0.6);
 	align-items: center;
 	justify-content: center;
 	padding: 15px 20px;
 	margin: 15px;
 	border-radius: 15px;
-	z-index: 2;
+	z-index: 20;
 }
 
 nav > section > a {
 	float: right;
 	margin-left: 20px;
+	z-index: 21;
 }
 
 /* Body */
@@ -48,7 +51,7 @@ article {
 	width: calc(100% - 30px);
 	background: linear-gradient(45deg, #f0a5b2bb, #3289e6aa);
 	border-radius: 15px;
-	z-index: 1;
+	z-index: -1;
 	position: relative;
 }
 
@@ -56,7 +59,7 @@ article::before {
 	content: "";
 	background: linear-gradient(45deg, #eb5466, #3289e6);
 	position: absolute;
-	z-index: -1;
+	z-index: -90;
 	top: 0;
 	bottom: 0;
 	width: 100%;
