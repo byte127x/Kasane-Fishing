@@ -2441,6 +2441,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Lures.Array.data[0].FishProbability.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
       propertyPath: Lures.Array.data[1].FishProbability.Array.data[0]
       value: 50
       objectReference: {fileID: 0}

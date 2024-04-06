@@ -39,7 +39,7 @@ public class RopeEnd : MonoBehaviour
     public void GenerateFish() {
         Launching = true;
         //GetComponent<ParticleSystem>().Play();
-        FishCoroutine = Fish(Random.Range(4, 10));
+        FishCoroutine = Fish(Random.Range(5, 11));
         StartCoroutine(FishCoroutine);
     }
 

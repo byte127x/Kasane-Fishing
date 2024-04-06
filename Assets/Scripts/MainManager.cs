@@ -117,7 +117,7 @@ public class MainManager : MonoBehaviour {
     public TextMeshProUGUI AchieveDesc;
     public Animator AchieveAnim;
 
-    private int NumberOfAchievementsAchieved = 0;
+    public int NumberOfAchievementsAchieved = 0;
     private IEnumerator CurrentCo;
     private List<int> AchievementQueue = new List<int>();
 
@@ -186,7 +186,7 @@ public class MainManager : MonoBehaviour {
     }
 
     public IEnumerator PrepareAchievement(int i) {
-        if (Achievements[i].BeenAchieved == true) {Debug.Log("ALREADY GOTIT!!!!!!");}
+        if (Achievements[i].BeenAchieved == true) {Debug.Log("ALREADY GOTIT!!!!!!");yield return null;}
         if (Achievements[i].BeenAchieved == false) {
             Achievements[i].BeenAchieved = true;
             AchieveImg.sprite = Achievements[i].Image;
@@ -202,6 +202,7 @@ public class MainManager : MonoBehaviour {
             int CurrentAch = AchievementQueue[0];
             yield return StartCoroutine(PrepareAchievement(CurrentAch));
             AchievementQueue.Remove(CurrentAch);
+            Debug.Log($"NUMBER OF ACHI: {NumberOfAchievementsAchieved}");
             if (NumberOfAchievementsAchieved == Achievements.Length-1) {
                 AchievementQueue.Add(Achievements.Length-1);
             }
