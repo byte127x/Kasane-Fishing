@@ -163,13 +163,13 @@ public class GenerateShopMenu : MonoBehaviour
                 MainManager.Instance.ShowAchievement(2);
             }
             else if (i == 4) {
-                MainManager.Instance.ShowAchievement(11);
+                MainManager.Instance.ShowAchievement(10);
             }
             else if (i == 5) {
-                MainManager.Instance.ShowAchievement(12);
+                MainManager.Instance.ShowAchievement(11);
             }
             else if (i == 6) {
-                MainManager.Instance.ShowAchievement(14);
+                MainManager.Instance.ShowAchievement(13);
             }
             BuyBtnSFX.Play();
         }
@@ -181,7 +181,7 @@ public class GenerateShopMenu : MonoBehaviour
             MainManager.Instance.Lures[i].IsOwned = true;
             GenerateMenu();
             if (i == 4) {
-                MainManager.Instance.ShowAchievement(13);
+                MainManager.Instance.ShowAchievement(12);
             }
             BuyBtnSFX.Play();
         }

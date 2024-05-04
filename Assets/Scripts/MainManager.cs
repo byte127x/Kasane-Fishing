@@ -157,7 +157,7 @@ public class MainManager : MonoBehaviour {
             source.Play();
         }
         else if (source.clip == Songs[4]) {
-            ShowAchievement(16);
+            ShowAchievement(15);
         }
 
         // achievement stuff
@@ -180,7 +180,7 @@ public class MainManager : MonoBehaviour {
 
     public IEnumerator ShowAchievementAsync() {
         AchieveAnim.SetTrigger("AchievementIn");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3f);
         AchieveAnim.SetTrigger("AchievementOut");
         yield return new WaitForSeconds(1f);
     }
@@ -189,11 +189,13 @@ public class MainManager : MonoBehaviour {
         if (Achievements[i].BeenAchieved == true) {Debug.Log("ALREADY GOTIT!!!!!!");yield return null;}
         if (Achievements[i].BeenAchieved == false) {
             Achievements[i].BeenAchieved = true;
-            AchieveImg.sprite = Achievements[i].Image;
-            AchieveTitle.text = Achievements[i].Name;
-            AchieveDesc.text = Achievements[i].Desc;
-            NumberOfAchievementsAchieved++;
-            yield return StartCoroutine(ShowAchievementAsync());
+            if (!(Achievements[i].Desc == "lolcatz")) {
+                AchieveImg.sprite = Achievements[i].Image;
+                AchieveTitle.text = Achievements[i].Name;
+                AchieveDesc.text = Achievements[i].Desc;
+                NumberOfAchievementsAchieved++;
+                yield return StartCoroutine(ShowAchievementAsync());
+            }
         }
     }
 
@@ -203,6 +205,9 @@ public class MainManager : MonoBehaviour {
             yield return StartCoroutine(PrepareAchievement(CurrentAch));
             AchievementQueue.Remove(CurrentAch);
             Debug.Log($"NUMBER OF ACHI: {NumberOfAchievementsAchieved}");
+            if (Achievements[18].BeenAchieved && Achievements[17].BeenAchieved && Achievements[16].BeenAchieved && Achievements[3].BeenAchieved && Achievements[7].BeenAchieved && Achievements[0].BeenAchieved) {
+                AchievementQueue.Add(19);
+            }
             if (NumberOfAchievementsAchieved == Achievements.Length-1) {
                 AchievementQueue.Add(Achievements.Length-1);
             }

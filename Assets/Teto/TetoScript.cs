@@ -34,6 +34,8 @@ public class TetoScript : MonoBehaviour
     public Sprite DefaultSprite;
     public Sprite SakabamSprite;
 
+    public bool ScreenShowing = false;
+
     void Awake() {
         if (IsInteractive) {
             liner = FishingRod.GetComponent<LineRenderer>();
@@ -80,7 +82,7 @@ public class TetoScript : MonoBehaviour
             float TimeSinceLastClick = Time.time - LastClick;
             DrawRope();
 
-            if (Input.GetMouseButtonDown(0) && TimeSinceLastClick > 0.5f) {
+            if (Input.GetMouseButtonDown(0) && TimeSinceLastClick > 0.5f && !ScreenShowing) {
                 if (StringEnd.GetComponent<RopeEnd>().Launching) {
                     Retract();
                 } else {

@@ -23,6 +23,7 @@ public class RopeEnd : MonoBehaviour
 
     private IEnumerator FishCoroutine;
     private MainManager.Fish MyFish;
+    private string TypeName = "";
 
     private List<string> AlreadyCaught = new List<string>();
     public int TimesFished = 0;
@@ -73,7 +74,7 @@ public class RopeEnd : MonoBehaviour
         FishTitle.text = MyFish.Name.ToUpper();
 
         // Determine Category Name
-        string TypeName = "";
+        TypeName = "";
         if (ChosenCategory == MainManager.Instance.CommonTypes) {TypeName = "COMMON";}
         if (ChosenCategory == MainManager.Instance.UncommonTypes) {TypeName = "UNCOMMON";}
         if (ChosenCategory == MainManager.Instance.RareTypes) {TypeName = "<material=\"NormalRare\">RARE</font>";}
@@ -98,6 +99,8 @@ public class RopeEnd : MonoBehaviour
     }
 
     void MoveFishScreenIn() {
+        FishingCanvasAnimator.Rebind();
+        GameObject.Find("TetoMC").GetComponent<TetoScript>().ScreenShowing = true;
         FishingCanvasAnimator.SetTrigger("MoveInFish");
         FishingCanvasAnimator.SetTrigger("BlurAgainAfterReverse");
         Launching = false;
@@ -105,6 +108,7 @@ public class RopeEnd : MonoBehaviour
 
     void MoveFishScreenOut() {
         //FishIndicator.transform.position = new Vector3(0, 90, 0);
+        GameObject.Find("TetoMC").GetComponent<TetoScript>().ScreenShowing = false;
         FishingCanvasAnimator.SetTrigger("MoveOutFish");
         FishingCanvasAnimator.SetTrigger("ReverseBlurComponent");
         ButtonSFX.Play();
@@ -124,20 +128,17 @@ public class RopeEnd : MonoBehaviour
                 MoveFishScreenIn();
                 
                 AlreadyCaught.Add(MyFish.Name);
+                if (TypeName == "COMMON") {MainManager.Instance.CommonTypes[System.Array.FindIndex(MainManager.Instance.CommonTypes, fish => fish.Name == MyFish.Name)].BeenCaught = true;}
+                else if (TypeName == "UNCOMMON") {MainManager.Instance.UncommonTypes[System.Array.FindIndex(MainManager.Instance.UncommonTypes, fish => fish.Name == MyFish.Name)].BeenCaught = true;}
+                else if (TypeName == "<material=\"NormalRare\">RARE</font>") {MainManager.Instance.RareTypes[System.Array.FindIndex(MainManager.Instance.RareTypes, fish => fish.Name == MyFish.Name)].BeenCaught = true;}
+                else if (TypeName == "<material=\"VocaRare\">VOCALOID</font>") {MainManager.Instance.VocaloidTypes[System.Array.FindIndex(MainManager.Instance.VocaloidTypes, fish => fish.Name == MyFish.Name)].BeenCaught = true;}
                 
                 MainManager.Instance.Wallet = MainManager.Instance.Wallet + MyFish.Value + MainManager.Instance.Lures[MainManager.Instance.CurrentLure].LureBonus;
                 ShowingE = false;
                 FishIndicator.GetComponent<Animator>().SetTrigger("FadeOut");
                 TimesFished++;
 
-                bool ShouldGetVocaAchievement = true;
-                for (int i = 0; i < MainManager.Instance.VocaloidTypes.Length; i++) {
-                    int AnIndex = AlreadyCaught.IndexOf(MainManager.Instance.VocaloidTypes[i].Name);
-                    if (AnIndex < 0) {
-                        ShouldGetVocaAchievement = false;
-                        break;
-                    }
-                }
+                MainManager.Instance.ShowAchievement(1);
 
                 // Achievements
                 if (!MainManager.Instance.Achievements[1].BeenAchieved) {
@@ -162,18 +163,25 @@ public class RopeEnd : MonoBehaviour
                     MainManager.Instance.ShowAchievement(7);
                 }
                 else if (MyFish.Name == "Cat Fish") {
-                    MainManager.Instance.ShowAchievement(9);
-                }
-                else if (MyFish.Name == "Polar Bear" || MyFish.Name == "Crab") {
-                    MainManager.Instance.ShowAchievement(10);
-                }
-                // ALL VOCALOIDS ACHIEVEMENT
-                if (ShouldGetVocaAchievement) {
                     MainManager.Instance.ShowAchievement(8);
                 }
+                else if (MyFish.Name == "Polar Bear" || MyFish.Name == "Crab") {
+                    MainManager.Instance.ShowAchievement(9);
+                }
+                // ALL VOCALOIDS ACHIEVEMENT
                 // FISHING ADDICT ACHIEVEMENT
+                else if (MyFish.Name == "Neru Fish") {
+                    MainManager.Instance.ShowAchievement(16);
+                }
+                else if (MyFish.Name == "Rin Fish") {
+                    MainManager.Instance.ShowAchievement(17);
+                }
+                else if (MyFish.Name == "Defishko") {
+                    MainManager.Instance.ShowAchievement(18);
+                }
+
                 if (TimesFished == 20) {
-                    MainManager.Instance.ShowAchievement(15);
+                    MainManager.Instance.ShowAchievement(14);
                 }
             }
         }

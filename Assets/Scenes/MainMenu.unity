@@ -1489,7 +1489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00012207031}
+  m_AnchoredPosition: {x: 0, y: -0.00024414062}
   m_SizeDelta: {x: 0, y: 0.00024414062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330231384
@@ -2278,7 +2278,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 3f68af9a53c0aec4fba0a156852f56d4, type: 3}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
       propertyPath: Achievements.Array.size
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
       propertyPath: Boats.Array.data[6].Price
@@ -2357,40 +2357,80 @@ PrefabInstance:
       value: Is that Luka???
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[8].Desc
+      value: Discover a Catfish. NYA!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[8].Name
+      value: Nekofish
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[9].Desc
+      value: Get a Polar Bear or Crab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[9].Name
+      value: That's not a fish ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
       propertyPath: Achievements.Array.data[0].Image
       value: 
       objectReference: {fileID: 21300000, guid: d227e23bd6463c54c86942d5e4057d5f, type: 3}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[13].Desc
+      propertyPath: Achievements.Array.data[10].Desc
+      value: Get the funny fish boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[10].Name
+      value: Sakabambabis!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[11].Desc
+      value: Buy a Navy Vessel from the store
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[11].Name
+      value: Military Teto!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[12].Desc
       value: Purchase a Black Hole lure
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[13].Name
+      propertyPath: Achievements.Array.data[12].Name
       value: the singularity.
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[14].Desc
+      propertyPath: Achievements.Array.data[13].Desc
       value: Use a plane as a boat
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[14].Name
+      propertyPath: Achievements.Array.data[13].Name
       value: Crash Landing!
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[15].Desc
+      propertyPath: Achievements.Array.data[14].Desc
       value: Fish over 20 times!
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[15].Name
+      propertyPath: Achievements.Array.data[14].Name
       value: Fishing Addict
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[16].Desc
+      propertyPath: Achievements.Array.data[15].Desc
       value: Listen to Kasane Territory
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[16].Name
+      propertyPath: Achievements.Array.data[15].Name
       value: KASANE TERRITORY!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[16].Desc
+      value: Achieve all the Achievements!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[16].Name
+      value: All Achievements!
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
       propertyPath: Achievements.Array.data[17].Desc
@@ -2401,21 +2441,41 @@ PrefabInstance:
       value: All Achievements!
       objectReference: {fileID: 0}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[13].Image
+      propertyPath: Achievements.Array.data[8].Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e4988f0df023d443a15904d0bb44b23, type: 3}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[9].Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c852d349a5977c48aad3ef738dbf9df, type: 3}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[10].Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b1e137410fa2134cb66c6f653e7b8d1, type: 3}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[11].Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 8063ae2b29660b5498b575a0b548dd7e, type: 3}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[12].Image
       value: 
       objectReference: {fileID: 21300000, guid: fb5357b07c94ef542adf1ccd0fc9fbae, type: 3}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[14].Image
+      propertyPath: Achievements.Array.data[13].Image
       value: 
       objectReference: {fileID: 21300000, guid: f14d0abbb68c19a40b5bde5fb32e91f0, type: 3}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[15].Image
+      propertyPath: Achievements.Array.data[14].Image
       value: 
       objectReference: {fileID: 21300000, guid: 2c0ee6ab77e44f245af14d249732ec8e, type: 3}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
-      propertyPath: Achievements.Array.data[16].Image
+      propertyPath: Achievements.Array.data[15].Image
       value: 
       objectReference: {fileID: 21300000, guid: 5224db4b69286474da64efd462b7aa08, type: 3}
+    - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
+      propertyPath: Achievements.Array.data[16].Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 269e36e5ca4609c49894de5d2e4a6eee, type: 3}
     - target: {fileID: 7391852573026724531, guid: 081fdb9cfcbc75d4e8675be7c1f44240, type: 3}
       propertyPath: Achievements.Array.data[17].Image
       value: 
